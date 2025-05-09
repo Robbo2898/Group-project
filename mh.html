@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Font and Metadata -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
+  <title>University Mental Health Support</title>
+
+  <!-- Chart.js for mood chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- External CSS and JavaScript -->
+  <link rel="stylesheet" href="mh.css">
+  <script src="mh.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>University Mental Health Support</h1>
+    <p class="tagline">Supporting student and staff well-being because mental health matters.</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-links">
+    <a href="hm.html">Home</a>
+    <a href="fn.html">Finance</a>
+    <a href="ac.html">Academic</a>
+    <a href="mh.html">Mental Health</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h2>Your Well-being is Our Priority</h2>
+      <p>We offer resources, counseling, and support to help you thrive at university.</p>
+    </div>
+
+    <!-- Mood Tracker Section -->
+    <div class="section" id="mood-tracker">
+      <h3>Mood Tracker</h3>
+      <p>How are you feeling today?</p>
+
+      <!-- Mood Options (Radio Buttons) -->
+      <div class="mood-options">
+        <label><input type="radio" name="mood" value="Happy" onclick="updateMood('Happy')"> 😊 Happy</label>
+        <label><input type="radio" name="mood" value="Calm" onclick="updateMood('Calm')"> 😌 Calm</label>
+        <label><input type="radio" name="mood" value="Anxious" onclick="updateMood('Anxious')"> 😟 Anxious</label>
+        <label><input type="radio" name="mood" value="Sad" onclick="updateMood('Sad')"> 😢 Sad</label>
+        <label><input type="radio" name="mood" value="Stressed" onclick="updateMood('Stressed')"> 😖 Stressed</label>
+      </div>
+
+      <!-- Dynamic mood message displayed here -->
+      <p id="mood-message" style="margin-top: 10px; font-style: italic;"></p>
+
+      <!-- Save mood button -->
+      <button onclick="saveMood()">Save Mood</button>
+
+      <!-- Recent mood log -->
+      <h4>Recent Mood Entries:</h4>
+      <ul id="mood-list"></ul>
+
+      <!-- Mood chart canvas (Chart.js) -->
+      <h4>Mood Frequency Chart:</h4>
+      <canvas id="moodChart"></canvas>
+    </div>
+
+    <!-- Journal Section -->
+    <div class="section" id="journal-section">
+      <h3>Journal Your Thoughts</h3>
+      <textarea id="journalEntry" rows="5"></textarea><br><br>
+
+      <!-- Journal save and reset buttons -->
+      <button onclick="saveJournalEntry()">Save Entry</button>
+      <button onclick="clearJournalEntries()">Reset Journal</button>
+
+      <!-- Display journal entries -->
+      <h4>Your Journal Entries:</h4>
+      <ul id="journalList"></ul>
+    </div>
+
+    <!-- Inspirational Quote Section -->
+    <div class="quote-section" id="quote-section">
+      <p id="inspirational-quote">"Believe you can and you're halfway there." - Theodore Roosevelt</p>
+    </div>
+
+    <!-- Helpful Resources Section -->
+    <div class="resources-section">
+      <h3>Helpful Resources</h3>
+      <div class="resource-links">
+        <a href="https://www.studentminds.org.uk/findsupport.html" target="_blank">University Counseling Services</a>
+        <a href="https://www.mind.org.uk/" target="_blank">Mind UK</a>
+        <a href="https://www.nhs.uk/mental-health/" target="_blank">NHS Mental Health</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 University Wellness and Mental Health Support app. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

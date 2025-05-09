@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #2D3B51, #3E5C76);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-bottom: 3px solid #4CAF50;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header h6 {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #a8dadc;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 8px #4CAF50;
+}
+
+/* Main Container */
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout */
+.layout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Study Timer */
+.study-timer-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+}
+
+#timer-display {
+    background: rgba(255, 255, 255, 0.8);
+    color: #2D3B51;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+}
+
+/* Task Manager */
+.task-manager-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    flex-grow: 1;
+}
+
+.task-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 20px;
+}
+
+.task-input, .task-date {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.add-task-btn {
+    background: #1976D2;
+}
+
+.add-task-btn:hover {
+    background: #145ea8;
+}
+
+/* Task List */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Sticky Notes */
+.sticky-notes {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.sticky-notes textarea {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Progress */
+.progress-bar {
+    width: 100%;
+    background: #e0e0e0;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: #2D3B51;
+}
+
+#progress-chart {
+    width: 200px;
+    height: 200px;
+    margin: 30px auto;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}

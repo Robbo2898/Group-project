@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Budget Planner</title>
+
+  <!-- Fonts & Chart.js -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Styles & Script -->
+  <link rel="stylesheet" href="fn.css" />
+  <script src="fn.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Finance</h1>
+    <p class="tagline">Supporting students with Finance.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-links">
+    <a href="hm.html">Home</a>
+    <a href="fn.html">Finance</a>
+    <a href="ac.html">Academic</a>
+    <a href="mh.html">Mental Health</a>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Income Section -->
+    <div class="section">
+      <h2>Income</h2>
+      <div class="button-group" id="income-buttons">
+        <button class="category-btn" onclick="selectIncome('Job')">💼 Job</button>
+        <button class="category-btn" onclick="selectIncome('Student Loan')">🎓 Student Loan</button>
+        <button class="category-btn" onclick="selectIncome('Scholarship')">🏅 Scholarship</button>
+        <button class="category-btn" onclick="selectIncome('Family Support')">👨‍👩‍👧‍👦 Family Support</button>
+        <button class="category-btn" onclick="selectIncome('Other')">➕ Other</button>
+      </div>
+      <input type="number" id="income-amount" placeholder="Enter amount (£)" step="0.01" />
+      <button onclick="addIncome()">Add Income</button>
+      <ul id="income-list"></ul>
+    </div>
+
+    <!-- Expenses Section -->
+    <div class="section">
+      <h2>Expenses</h2>
+      <div class="button-group" id="expense-buttons">
+        <button class="category-btn" onclick="selectExpense('Rent')">🏠 Rent</button>
+        <button class="category-btn" onclick="selectExpense('Food')">🍔 Food</button>
+        <button class="category-btn" onclick="selectExpense('Transport')">🚌 Transport</button>
+        <button class="category-btn" onclick="selectExpense('Entertainment')">🎮 Entertainment</button>
+        <button class="category-btn" onclick="selectExpense('Other')">➕ Other</button>
+      </div>
+      <input type="number" id="expense-amount" placeholder="Enter amount (£)" step="0.01" />
+      <button onclick="addExpense()">Add Expense</button>
+      <ul id="expense-list"></ul>
+    </div>
+
+    <!-- Recurring Payments -->
+    <div class="section">
+      <h2>Recurring Payments</h2>
+      <input type="text" id="recurring-name" placeholder="Name (e.g., Rent)" />
+      <input type="number" id="recurring-amount" placeholder="Amount (£)" step="0.01" />
+      <input type="date" id="recurring-date" />
+      <button onclick="addRecurringPayment()">Add Recurring</button>
+      <ul id="recurring-list"></ul>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <h2>Summary</h2>
+      <p>Total Income: £<span id="total-income">0.00</span></p>
+      <p>Total Expenses: £<span id="total-expenses">0.00</span></p>
+      <p><strong>Balance: £<span id="balance">0.00</span></strong></p>
+    </div>
+
+    <!-- Expense Chart -->
+    <div class="section chart-wrapper">
+      <h2>Expense Breakdown</h2>
+      <canvas id="expenseChart"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Student Wellness App. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

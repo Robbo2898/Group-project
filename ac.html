@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Management</title>
+  <link rel="stylesheet" href="ac.css" />
+  <script src="ac.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Academic Management</h1>
+    <h6>Empowering your study journey</h6>
+  </header>
+
+  <nav class="nav-links">
+        
+    <a href="hm.html">Home</a>
+    <a href="fn.html">Finance</a>
+    <a href="ac.html">Academic</a>
+    <a href="mh.html">Mental Health</a>
+  </nav>
+
+  <main>
+    <div class="layout-container">
+      <!-- Study Timer Section -->
+      <section class="study-timer-section">
+        <h2>Study Timer</h2>
+        <div id="timer-display">25:00</div>
+        <button id="start-pomodoro">Start</button>
+        <button id="pause-pomodoro" disabled>Pause</button>
+        <button id="reset-pomodoro">Reset</button>
+        <p id="pomodoro-phase">Phase: Study</p>
+        <p id="completed-sessions">Completed Sessions: 0</p>
+        <h3>How It Works</h3>
+        <ul>
+          <li><strong>Study Phase:</strong> 25 minutes focused work.</li>
+          <li><strong>Break Phase:</strong> - 5 min short, 15 min long after 4 sessions.</li>
+          <li><strong>Automatic Switching</strong> between study and breaks.</li>
+          <li><strong>Session Tracking</strong> tracks study progress.</li>
+        </ul>
+      </section>
+
+      <!-- Task Manager -->
+      <section class="task-manager-section">
+        <h2>📝 Task Manager</h2>
+        <form id="task-form" class="task-form">
+          <input type="text" id="task-input" class="task-input" placeholder="Enter task..." required />
+          <input type="date" id="task-date" class="task-date" required />
+          <button type="submit" class="add-task-btn">Add Task</button>
+        </form>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </div>
+
+    <!-- Sticky Notes -->
+    <section class="sticky-notes">
+      <h2>Sticky Notes</h2>
+      <form id="sticky-note-form">
+        <textarea id="sticky-note-input" placeholder="Write a note..." rows="3"></textarea>
+        <button type="submit">Add Note</button>
+      </form>
+      <ul id="sticky-notes-list"></ul>
+    </section>
+
+    <!-- Progress Tracking -->
+    <section>
+      <h2>Progress Tracking</h2>
+      <div id="progress-bar" class="progress-bar">0% Complete</div>
+      <canvas id="progress-chart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025  University Wellness and Mental Health Support app</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
