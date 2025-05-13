@@ -127,7 +127,8 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.task-input, .task-date {
+.task-input,
+.task-date {
     flex: 1;
     padding: 10px;
     border: none;
@@ -199,103 +200,55 @@ footer {
     text-align: center;
     color: #fff;
 }
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
 
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-bottom: 1px solid #444;
-    text-align: center;
-  }
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        text-align: center;
+    }
 
-  .hero h2 {
-    font-size: 1.4rem;
-  }
+    .hero h2 {
+        font-size: 1.4rem;
+    }
 
-  .mood-options label {
-    display: block;
-    margin: 8px 0;
-  }
+    .mood-options label {
+        display: block;
+        margin: 8px 0;
+    }
 
-  button {
-    width: 100%;
-    margin: 5px 0;
-  }
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
 
-  textarea {
-    width: 100%;
-    font-size: 1rem;
-  }
+    textarea {
+        width: 100%;
+        font-size: 1rem;
+    }
 
-  canvas {
-    width: 100% !important;
-    height: auto !important;
-  }
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
 
-  .resource-links a {
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-} @media (max-width: 768px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border-bottom: 1px solid #444;
-    text-align: center;
-  }
-
-  .hero h2 {
-    font-size: 1.4rem;
-  }
-
-  .mood-options label {
-    display: block;
-    margin: 8px 0;
-  }
-
-  button {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  textarea {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  canvas {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .resource-links a {
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+    .resource-links a {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 }
-
