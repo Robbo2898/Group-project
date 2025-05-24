@@ -1,254 +1,241 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
-
-/* General Styles */
+/* Global Styles */
 body {
-    font-family: 'Nunito', sans-serif;
-    background: linear-gradient(135deg, #2D3B51, #3E5C76);
-    color: #fff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: linear-gradient(180deg, #FFD700, #FFA500);
+    color: #ddac0b;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-header {
-    width: 100%;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Header / Hero Section */
+.main-header {
     text-align: center;
-    border-bottom: 3px solid #4CAF50;
+    padding: 40px 20px;
+    color: #D61C1F;
+    border-bottom: 1px solid rgba(214, 28, 31, 0.2);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header h6 {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #a8dadc;
-}
-
-/* Navigation */
-nav {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 15px 0;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 30px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 8px #4CAF50;
-}
-
-/* Main Container */
-main {
-    width: 80%;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Layout */
-.layout-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-/* Study Timer */
-.study-timer-section {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    width: 300px;
-    text-align: center;
-}
-
-#timer-display {
-    background: rgba(255, 255, 255, 0.8);
-    color: #2D3B51;
-    width: 150px;
-    height: 150px;
-    line-height: 150px;
-    font-size: 2.5rem;
-    border-radius: 50%;
-    margin: 20px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Buttons */
-button {
-    background: #4CAF50;
-    color: white;
+.hero-section {
+    background: url('dw2.jpeg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #D61C1F;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
     border: none;
-    padding: 10px 20px;
-    margin: 10px 5px;
     border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    margin-bottom: 40px;
 }
 
-button:hover {
-    background: #388E3C;
-    transform: translateY(-2px);
+.main-header h1,
+.main-header p {
+    font-size: 38px;       /* Match title size */
+    font-weight: bold;     /* Make it punchy */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Visibility boost */
 }
 
-/* Task Manager */
-.task-manager-section {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 12px;
-    flex-grow: 1;
-}
 
-.task-form {
-    display: flex;
-    gap: 1rem;
+.main-header p {
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
-.task-input,
-.task-date {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+.call-button {
+    display: inline-block;
+    background-color: #D61C1F;
+    color: #FFD700;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.add-task-btn {
-    background: #1976D2;
+.call-button:hover {
+    background-color: #B31518;
+    transform: scale(1.05);
 }
 
-.add-task-btn:hover {
-    background: #145ea8;
+/* Vehicle Section */
+.vehicle-section {
+    margin-top: 50px;
+    padding: 30px 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(196, 31, 34, 0.897);
 }
 
-/* Task List */
-.task-list {
+.vehicle-section h2 {
+    font-size: 30px;
+    color: #D61C1F;
+    margin-bottom: 30px;
+}
+
+.vehicle-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.vehicle {
+    padding: 0;
+    text-align: center;
+    color: #D61C1F;
+    max-width: 500px;
+    width: 100%;
+}
+
+.vehicle h3 {
+    font-size: 26px;
+    margin: 20px 0 12px;
+    color: #B31518;
+}
+
+.vehicle img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.vehicle p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #D61C1F;
+}
+
+/* Flyer Section */
+.flyer-section {
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(226, 31, 34, 0.966);
+}
+
+.flyer-section h2 {
+    font-size: 28px;
+    color: #D61C1F;
+    margin-bottom: 30px;
+}
+
+.flyer-section ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
     padding: 0;
+    margin: 0 auto 30px auto;
+    max-width: 500px;
+    width: 100%;
 }
 
-.task-list li {
-    background: rgba(255, 255, 255, 0.1);
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
+.flyer-section ul li {
+    margin: 10px 0;
+    width: 100%;
 }
 
-/* Sticky Notes */
-.sticky-notes {
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+.service-card {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(214, 28, 31, 0.4);
     border-radius: 12px;
-}
-
-.sticky-notes textarea {
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-}
-
-/* Progress */
-.progress-bar {
-    width: 100%;
-    background: #e0e0e0;
-    height: 30px;
-    margin-top: 20px;
-    border-radius: 20px;
-    overflow: hidden;
-    text-align: center;
-    line-height: 30px;
+    padding: 18px 24px;
+    font-size: 20px;
     font-weight: bold;
-    color: #2D3B51;
+    color: #D61C1F;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#progress-chart {
-    width: 200px;
-    height: 200px;
-    margin: 30px auto;
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.flyer-section h3 {
+    font-size: 26px;
+    margin: 18px 0;
+}
+
+.flyer-section a.call-button {
+    display: inline-block;
+    background-color: #D61C1F;
+    color: #FFD700;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flyer-section a.call-button:hover {
+    background-color: #B31518;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 60px;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid rgba(214, 28, 31, 0.1);
+}
+
+.contact h2 {
+    font-size: 28px;
+    color: #D61C1F;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 20px;
+    color: #D61C1F;
+    margin: 10px 0;
 }
 
 /* Footer */
 footer {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
     text-align: center;
-    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    color: #D61C1F;
+    font-size: 18px;
+    border-top: 1px solid rgba(214, 28, 31, 0.1);
 }
 
-/* Mobile Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        padding: 10px;
+    .main-header h1 {
+        font-size: 32px;
     }
 
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .main-header p {
+        font-size: 20px;
     }
 
-    nav a {
-        display: block;
+    .call-button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+
+    .vehicle {
         width: 100%;
-        padding: 10px;
-        border-bottom: 1px solid #444;
-        text-align: center;
     }
 
-    .hero h2 {
-        font-size: 1.4rem;
-    }
-
-    .mood-options label {
-        display: block;
-        margin: 8px 0;
-    }
-
-    button {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    textarea {
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    canvas {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .resource-links a {
-        display: block;
-        margin-bottom: 10px;
-        text-align: center;
+    .flyer-section ul {
+        max-width: 90%;
     }
 }
